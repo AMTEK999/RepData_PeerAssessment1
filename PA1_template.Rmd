@@ -10,6 +10,8 @@ date: "December 17, 2016"
 ```{r setup, include=FALSE}
 
 knitr::opts_chunk$set(echo = TRUE)
+setwd("C:\\R\\Reproducable\\week2")
+knitr::opts_chunk$set(fig.path = ".\\figures" )
 
 ```
 
@@ -24,6 +26,7 @@ library(dplyr)
 library(knitr)
 library(ggplot2)
 setwd("C:\\R\\Reproducable\\week2")
+
 dataActivity <- as.data.frame(read.csv(file = "activity.csv", header = TRUE))
 dataActivity$Tdate = as.Date( dataActivity$date)
 dataActivity$steps = as.numeric( dataActivity$steps)
